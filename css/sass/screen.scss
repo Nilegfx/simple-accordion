@@ -1,0 +1,51 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+
+$acc-color: #cbc664;
+
+$acc-header-color: lighten($acc-color, 10);
+$acc-header-font-color: darken($acc-color, 30);
+
+$acc-header-hover-color: lighten($acc-color, 12);
+$acc-content-color: lighten($acc-color, 20);
+$acc-content-font-color: darken($acc-color, 40);
+
+.accordion-container {
+  font-family: 'Titillium Web', arial;
+  width: 500px;
+  margin: 30px auto 0 auto;
+  line-height:1.4em;
+
+}
+
+.accordion-actions{
+	margin: 10px 0;
+}
+
+.nile {
+  // background-color: #e04145;
+  margin-bottom: 10px;
+  @include border-radius;
+  border:1px solid $acc-color;
+  h3 {
+  	font-weight:bold;
+    padding: 20px;
+    cursor: pointer;
+    color:$acc-header-font-color;
+    background-color: $acc-header-color;
+
+    &:hover{
+    	background-color:$acc-header-hover-color;
+    }
+  }
+  .content {
+    padding: 20px;
+    background-color: $acc-content-color;
+		color:$acc-content-font-color;
+  }
+}
